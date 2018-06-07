@@ -1,13 +1,10 @@
-##
-# The goal of this module is to take in an English language query, convert it to a Mongo Query,
-# query the database, and return a list of companies
-##
-from pymongo import MongoClient # pymongo is the mongo client that python uses to connect to mongo db
+
+from pymongo import MongoClient 
 import re
 from textblob import TextBlob
  
 # Database connection
-client = MongoClient('mongodb://karan.rajpal:karan.rajpal@ds163397.mlab.com:63397/joby') # a mongo db hosting platform called mlab. free place to host mong db
+client = MongoClient('mongodb://karan.rajpal:karan.rajpal@ds163397.mlab.com:63397/joby')
 db = client.joby    # Name of the database
 companies_collection = db.Companies # Name of the collection
  
